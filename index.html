@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Password Strength Directive</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+        <link rel="stylesheet" href="css/password-strength-widget.css">
+        <style>
+            body{
+                padding-top:60px;
+            }
+        </style>
+    </head>
+    <body ng-app="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-sm-offset-3">
+                    <h1>Password Strength Directive - AngularJs </h1>
+                    <br><br>
+                    <div ng-controller="MainController">
+                       <password-strength></password-strength>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script src="js/password-strength-directive.js"></script>
+    <script>
+        (function(angular) {
+
+            'use strict';
+            angular.module('app', ['app.widget'])
+            .controller('MainController', ['$scope', function($scope) {           
+            }]);
+
+        })(window.angular);
+    </script>
+</html>
